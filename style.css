@@ -2,3 +2,71 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    /* background-image: linear-gradient(
+        45deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(289deg 100% 21%) 11%,
+        hsl(315deg 100% 27%) 22%,
+        hsl(329deg 100% 36%) 33%,
+        hsl(337deg 100% 43%) 44%,
+        hsl(357deg 91% 59%) 56%,
+        hsl(17deg 100% 59%) 67%,
+        hsl(34deg 100% 53%) 78%,
+        hsl(45deg 100% 50%) 89%,
+        hsl(55deg 100% 50%) 100%
+      );
+      height: 100vh; */
+}
+
+
+
+input {
+    display: block;
+    width: 20rem;
+    margin: 0.3rem;
+    border: 1px solid black;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.operators button.bigButton {
+    height: 6.1rem;
+}
+
+.operators button.clear {
+    background-color: red;
+}
+
+.operators button.result {
+    background-color: blue;
+}
+
+.numbers button,
+.operators button {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.1rem;
+    border: 2px solid silver;
+    outline: none;
+}
+
+.numbers button:hover,
+.operators button:hover {
+    border: 2px solid rgb(80, 80, 80);
+}
+
+.numbers button:active,
+.operators button:active {
+    font-weight: bold;
+    background: silver;
+}
+
+.left-panel,
+.right-panel {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.5rem;
+}
