@@ -19,10 +19,45 @@ let calculator = {
 
     buttonClick: function (e) {
         let divHTMLText = e.target.innerHTML;
-        calculator.addToInput(divHTMLText);
+
+        switch(divHTMLText) {
+            case '=':
+                calculator.evaluate();
+                break;
+            case 'C':
+                calculator.clear();
+                break;
+            case '9':
+            case '8':
+            case '7':
+            case '6':
+            case '5':
+            case '4':
+            case '3':
+            case '2':
+            case '1':
+            case '0':
+            case '00':
+            case '.':
+            case '+':
+            case '-':
+            case '*':
+            case '/':
+                calculator.addToInput(divHTMLText);
+            break;
+        }
     },
 
     addToInput: function (str) {
         this.input.value += str;
+    },
+
+    evaluate: function() {
+        let result = math.evaluate(calculator.input.value);
+        calculator.input.value = result;
+    },
+
+    clear: function() {
+        calculator.input.value = "";
     }
 }
